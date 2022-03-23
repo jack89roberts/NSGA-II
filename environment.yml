@@ -1,0 +1,8 @@
+name: nsga-ii
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - pip=21.2.4
+  - pip:
+    - -r requirements.txt
