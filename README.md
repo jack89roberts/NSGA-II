@@ -2,6 +2,8 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jack89roberts/NSGA-II/HEAD?labpath=NSGA-II.ipynb)
 
+An introduction to optimisation with genetic algorithms and multi-objective optimisation with NSGA-II for learning/teaching purposes.
+
 ## Setup
 
 Either with conda or pip:

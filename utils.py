@@ -225,9 +225,10 @@ def plot_circle_fitness(pop, fitness_fn, radius, suptitle=None):
             origin="lower",
             cmap="Blues",
             aspect="auto",
+            extent=[X.min() - delta, X.max() + delta, Y.min() - delta, Y.max() + delta],
         )
         ax[i].scatter(
-            pop[:, 0] * delta * radius, pop[:, 1] * delta * radius, color="orange", s=64
+            pop[:, 0], pop[:, 1], color="orange", s=64
         )
         ax[i].set_title(
             f"Objective {i + 1}\n${obj_label[i]}^2$ if $(x^2 + y^2) \leq r^2$ else 0"
@@ -239,8 +240,8 @@ def plot_circle_fitness(pop, fitness_fn, radius, suptitle=None):
 
     ax[2].scatter(fitness_fn(pop)[:, 0], fitness_fn(pop)[:, 1])
     ax[2].set_title("Fitness")
-    ax[2].set_xlim([0, 10000])
-    ax[2].set_ylim([0, 10000])
+    ax[2].set_xlim([0, radius**2])
+    ax[2].set_ylim([0, radius**2])
     ax[2].set_xlabel("Objective 1")
     ax[2].set_ylabel("Objective 2")
     fig.tight_layout()
