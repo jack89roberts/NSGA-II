@@ -230,7 +230,7 @@ def plot_circle_fitness(pop, fitness_fn, radius, suptitle=None):
             pop[:, 0] * delta * radius, pop[:, 1] * delta * radius, color="orange", s=64
         )
         ax[i].set_title(
-            f"Objective {i}\n${obj_label[i]}^2$ if $(x^2 + y^2) < r^2$ else 0"
+            f"Objective {i + 1}\n${obj_label[i]}^2$ if $(x^2 + y^2) \leq r^2$ else 0"
         )
         ax[i].set_xlabel("x")
         ax[i].set_xticks([])
